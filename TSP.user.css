@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Télécom Sud Paris
 @namespace      github.com/paris-ci/stylus
-@version        1.0.0
+@version        1.1.0
 @description    Styles pour TSP
 @author         Arthur Jovart
 @license        LGPL
@@ -243,3 +243,28 @@ domain("moodle2016.tem-tsp.eu") {
     }
     */
 }
+
+@-moz-document domain("si-etudiants.imtbs-tsp.eu") {
+    #loginBack{
+        filter: brightness(15%);
+    }
+    
+    a,
+    i,
+    h2,
+    h3,
+    h4 {
+        color: var(--accent-color) !important;
+    }
+    
+    #loginContainer {
+        background-color: var(--background-accent-color) !important;
+    }
+    
+    body,
+    #PageForm {
+        background-color: var(--background-color) !important;
+    }
+}
+
+
