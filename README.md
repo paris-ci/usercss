@@ -1,2 +1,2 @@
 # usercss
-Cool usercass for websites I frequently visit
+Cool usercss for websites I frequently visit
