@@ -1,0 +1,245 @@
+/* ==UserStyle==
+@name           Télécom Sud Paris
+@namespace      github.com/paris-ci/stylus
+@version        1.0.0
+@description    Styles pour TSP
+@author         Arthur Jovart
+@license        LGPL
+@var color background-color "Couleur d'arriere plan" #000226
+@var color background-accent-color "Couleur d'accentuation arriere plan" #2C2E4C
+
+@var color text-color "Couleur du texte" #BBBCC9
+@var color accent-color "Couleur d'accentuation texte" #E8E9ED
+@var text non-hover-opacity "Diminution de la luminosité sur certains elements brillants (pct)" 40%
+@var text hover-opacity "Diminution de la luminosité sur certains elements brillants avec souris par dessus (pct)" 90%
+==/UserStyle== */
+@-moz-document domain("trombi.imtbs-tsp.eu") {
+    #contenu,
+    body,
+    #bas {
+        background: none;
+        background-color: var(--background-color);
+    }
+
+    #haut {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    #haut:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+
+    form {
+        background-color: var(--background-accent-color) !important;
+    }
+
+    label {
+        color: var(--text-color);
+    }
+
+    .disabled {
+        color: var(--text-color);
+        filter: brightness(80%);
+    }
+}
+
+@-moz-document domain("cas.imtbs-tsp.eu") {
+    body {
+        background-color: var(--background-color);
+    }
+
+    #content h2,
+    label,
+    .accesskey {
+        color: var(--text-color);
+    }
+
+    #content {
+        background-color: var(--background-accent-color);
+        min-height: 0px;
+    }
+
+    header {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    header:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+    a {
+        color: var(--accent-color);
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #msg {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    #msg:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+}
+
+@-moz-document domain("moodle.imtbs-tsp.eu"),
+domain("moodle2019.imtbs-tsp.eu"),
+domain("moodle2018.imtbs-tsp.eu"),
+domain("moodle2017.imtbs-tsp.eu"),
+domain("moodle2016.tem-tsp.eu") {
+    body {
+        background-color: var(--background-color);
+    }
+
+    #content h2,
+    label,
+    a,
+    .accesskey {
+        color: var(--text-color);
+    }
+
+    #content {
+        background-color: var(--background-accent-color);
+        min-height: 0px;
+    }
+
+    .card,
+    #region-main,
+    #page {
+        color: var(--text-color);
+        background-color: var(--background-accent-color);
+        min-height: 0px;
+    }
+
+    .form-control {
+        background-color: var(--text-color);
+    }
+
+    .card-body li {
+        background-color: var(--background-accent-color) !important;
+    }
+
+    .bg-pulse-grey {
+        background-color: var(--background-color) !important;
+    }
+
+    .courseimage {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    .courseimage:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+    a {
+        color: var(--accent-color);
+    }
+}
+
+@-moz-document domain("z.imt.fr") {
+
+    /* 
+     * Ouais, c'est very moche, mais ca marche very bien. 
+     * C'est pas forcément le plus joli mais ca, je suis pas designer. Faut en vouloir au CSS de zimbra, c'est de la belle merde. 
+     */
+    .logo,
+    #ZLoginNotice {
+        display: none;
+    }
+
+    .form hr {
+        border-color: transparent transparent var(--background-color);
+    }
+
+    body {
+        background-color: var(--background-color) !important;
+    }
+
+    td {
+        color: var(--accent-color) !important;
+    }
+    div,
+    table,
+    tbody,
+    td,
+    input {
+        color: var(--text-color) !important;
+        background-color: var(--background-color) !important;
+        border-bottom-width: 0;
+        font-weight: normal;
+    }
+
+
+    #modifiedLogin {
+        background: var(--background-color) !important;
+    }
+
+    #zLoginForm,
+    .versionBlock {
+        background-color: var(--background-accent-color);
+    }
+
+    label {
+        color: var(--accent-color) !important;
+    }
+}
+
+@-moz-document domain("ecampus.imtbs-tsp.eu") {
+    #portalPageHeader {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    #portalPageHeader:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+    #portalPageBody {
+        background-color: var(--background-color);
+    }
+
+    #portalPageBodyInner,
+    .handle,
+    #actions,
+    .fl-widget-content,
+    form {
+        background-color: var(--background-color) !important;
+    }
+
+    #portlet-zimbra #message,
+    #portlet-zimbra #mail,
+    #portlet-zimbra #calendar,
+    #portlet-zimbra #tasks,
+    .breadcrumbs,
+    .portal-subnav-link,
+    #toolbar {
+        background-color: var(--background-accent-color) !important;
+    }
+
+
+
+    #portalEmergencyBlock .info h3 {
+        color: var(--text-color);
+        background-color: var(--background-color) !important;
+    }
+
+    a,
+    i,
+    h2,
+    h3,
+    h4 {
+        color: var(--accent-color) !important;
+    }
+
+    div {
+        color: var(--text-color);
+    }
+
+    /* Bug dans FF, pas moyen de styliser les iFrames
+    .animation_container {
+        background-color: var(--background-color) !important;
+    }
+    */
+}
