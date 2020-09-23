@@ -34,7 +34,8 @@
         background-color: var(--background-accent-color) !important;
     }
 
-    label {
+    label,
+    p {
         color: var(--text-color);
     }
 
