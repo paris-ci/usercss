@@ -94,6 +94,22 @@ domain("moodle2016.tem-tsp.eu") {
     body {
         background-color: var(--background-color);
     }
+    
+    .nav, .navbar-bootswatch, .nav-item, .navbar-brand, .nav.fixed-top, .dropdown-toggle.nav-link,
+    .navbar-bootswatch .navbar-nav .nav-link {
+        background-color: var(--background-color) !important;
+        color: var(--text-color) !important;
+    }
+    
+    .navbar-bootswatch a, .navbar-bootswatch .navbar-nav .nav-link:hover {
+        background-color: var(--background-color) !important;
+        color: var(--text-color) !important;
+    }
+    
+    .card-body, .section, #multi_section_tiles, .format-tiles .course-content .section .activity:hover {
+        background-color: var(--background-accent-color) !important;
+        color: var(--text-color);
+    }
 
     #content h2,
     label,
@@ -267,5 +283,3 @@ domain("moodle2016.tem-tsp.eu") {
         background-color: var(--background-color) !important;
     }
 }
-
-
