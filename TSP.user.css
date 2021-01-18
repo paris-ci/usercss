@@ -94,19 +94,28 @@ domain("moodle2016.tem-tsp.eu") {
     body {
         background-color: var(--background-color);
     }
-    
-    .nav, .navbar-bootswatch, .nav-item, .navbar-brand, .nav.fixed-top, .dropdown-toggle.nav-link,
+
+    .nav,
+    .navbar-bootswatch,
+    .nav-item,
+    .navbar-brand,
+    .nav.fixed-top,
+    .dropdown-toggle.nav-link,
     .navbar-bootswatch .navbar-nav .nav-link {
         background-color: var(--background-color) !important;
         color: var(--text-color) !important;
     }
-    
-    .navbar-bootswatch a, .navbar-bootswatch .navbar-nav .nav-link:hover {
+
+    .navbar-bootswatch a,
+    .navbar-bootswatch .navbar-nav .nav-link:hover {
         background-color: var(--background-color) !important;
         color: var(--text-color) !important;
     }
-    
-    .card-body, .section, #multi_section_tiles, .format-tiles .course-content .section .activity:hover {
+
+    .card-body,
+    .section,
+    #multi_section_tiles,
+    .format-tiles .course-content .section .activity:hover {
         background-color: var(--background-accent-color) !important;
         color: var(--text-color);
     }
@@ -262,10 +271,10 @@ domain("moodle2016.tem-tsp.eu") {
 }
 
 @-moz-document domain("si-etudiants.imtbs-tsp.eu") {
-    #loginBack{
+    #loginBack {
         filter: brightness(15%);
     }
-    
+
     a,
     i,
     h2,
@@ -273,13 +282,38 @@ domain("moodle2016.tem-tsp.eu") {
     h4 {
         color: var(--accent-color) !important;
     }
-    
+
     #loginContainer {
         background-color: var(--background-accent-color) !important;
     }
-    
+
     body,
     #PageForm {
         background-color: var(--background-color) !important;
+    }
+}
+
+@-moz-document domain("www-inf.telecom-sudparis.eu") {
+    body {
+        background-color: var(--background-color) !important;
+        color: var(--text-color);
+    }
+
+    .solution-content,
+    .code {
+        background-color: var(--background-accent-color) !important;
+    }
+
+    .header {
+        background-color: var(--background-accent-color) !important;
+        color: var(--text-color);
+    }
+    
+    .header a {
+        text-decoration: underline;
+    }
+
+    .footer {
+        display: none
     }
 }
