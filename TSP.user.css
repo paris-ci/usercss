@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Télécom Sud Paris
 @namespace      github.com/paris-ci/stylus
-@version        1.1.0
+@version        2.0.0
 @description    Styles pour TSP
 @author         Arthur Jovart
 @license        LGPL
@@ -148,6 +148,11 @@ domain("moodle2016.tem-tsp.eu") {
         background-color: var(--background-accent-color) !important;
     }
 
+    section.block h5 {
+        background-color: var(--background-accent-color) !important;
+        color: var(--accent-color);
+    }
+
     .bg-pulse-grey {
         background-color: var(--background-color) !important;
     }
@@ -230,6 +235,7 @@ domain("moodle2016.tem-tsp.eu") {
     .handle,
     #actions,
     .fl-widget-content,
+    article.content,
     form {
         background-color: var(--background-color) !important;
     }
@@ -244,9 +250,34 @@ domain("moodle2016.tem-tsp.eu") {
         background-color: var(--background-accent-color) !important;
     }
 
+    #specialMenu a {
+        color: black !important;
+    }
 
 
-    #portalEmergencyBlock .info h3 {
+    #specialMenu > li {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    #specialMenu > li:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+    img {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    img:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+
+
+
+
+
+    #portalEmergencyBlock .info h3,
+    #portalEmergencyBlock .alert h3,
+    #portalEmergencyBlock h3 {
         color: var(--text-color);
         background-color: var(--background-color) !important;
     }
@@ -308,12 +339,67 @@ domain("moodle2016.tem-tsp.eu") {
         background-color: var(--background-accent-color) !important;
         color: var(--text-color);
     }
-    
+
     .header a {
         text-decoration: underline;
     }
 
     .footer {
         display: none
+    }
+}
+
+@-moz-document domain("print.tem-tsp.eu") {
+    html,
+    body {
+        background-image: none !important;
+        background-color: var(--background-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    h1 {
+        color: var(--text-color) !important;
+    }
+}
+@-moz-document regexp("https://bbb.*.imtbs-tsp.eu/.*") {
+    html, body, .chat--111wNM, .messageList--hsNac, .userNameMain--2fo2zM {
+        background-image: none !important;
+        background-color: var(--background-color);
+        color: var(--text-color) !important;
+    }
+    
+    #innerdocbody, .listItem--Siv4F, .active--Z1SuO2X, .chatNameMain--Z1S9hh4, .hideBtn--ZOkOfz, .note--Z1w6MNh {
+        background-color: var(--background-accent-color);
+        color: var(--text-color) !important;
+    }
+    
+    .wrapper--Z20hQYP > div:nth-child(2) > span:nth-child(2) > div:nth-child(1) {
+        background-color: var(--background-accent-color);
+    }
+    
+    .svgContainer--Z1z3wO0 {
+        filter: brightness(var(--non-hover-opacity));
+    }
+
+    .svgContainer--Z1z3wO0:hover {
+        filter: brightness(var(--hover-opacity));
+    }
+    
+    :root {
+        --systemMessage-background-color: var(--background-accent-color);
+        --unread-messages-bg: var(--color-danger);
+        --user-list-text: var(--text-color);
+        --color-background: var(--background-color);
+        --user-list-bg: var(--background-color);
+        --user-thumbnail-border: var(--color-gray-light);
+        --user-thumbnail-text: var(--text-color);
+        --voice-user-bg: var(--background-color);
+        --voice-user-text: var(--text-color);
+        --moderator-text: var(--text-color);
+        --moderator-bg: var(--background-color);
+        --sub-name-color: vvar(--text-color);
+        --user-icons-color: var(--text-color);
+        --list-item-bg-hover: #dce4ed;
+        --item-focus-border: var(--color-blue-lighter);
     }
 }
