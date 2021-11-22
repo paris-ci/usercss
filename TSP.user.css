@@ -92,7 +92,8 @@ domain("moodle2018.imtbs-tsp.eu"),
 domain("moodle2017.imtbs-tsp.eu"),
 domain("moodle2016.tem-tsp.eu") {
     body {
-        background-color: var(--background-color);
+        color: var(--text-color) !important;
+        background-color: var(--background-color) !important;
     }
 
     .nav,
@@ -117,31 +118,31 @@ domain("moodle2016.tem-tsp.eu") {
     #multi_section_tiles,
     .format-tiles .course-content .section .activity:hover {
         background-color: var(--background-accent-color) !important;
-        color: var(--text-color);
+        color: var(--text-color) !important;
     }
 
     #content h2,
     label,
     a,
     .accesskey {
-        color: var(--text-color);
+        color: var(--text-color) !important;
     }
 
     #content {
-        background-color: var(--background-accent-color);
-        min-height: 0px;
+        background-color: var(--background-accent-color) !important;
+        min-height: 0px !important;
     }
 
     .card,
     #region-main,
     #page {
-        color: var(--text-color);
-        background-color: var(--background-accent-color);
-        min-height: 0px;
+        color: var(--text-color) !important;
+        background-color: var(--background-accent-color) !important;
+        min-height: 0px !important;
     }
 
     .form-control {
-        background-color: var(--text-color);
+        background-color: var(--text-color) !important;
     }
 
     .card-body li {
@@ -150,7 +151,7 @@ domain("moodle2016.tem-tsp.eu") {
 
     section.block h5 {
         background-color: var(--background-accent-color) !important;
-        color: var(--accent-color);
+        color: var(--accent-color) !important;
     }
 
     .bg-pulse-grey {
@@ -158,15 +159,45 @@ domain("moodle2016.tem-tsp.eu") {
     }
 
     .courseimage {
-        filter: brightness(var(--non-hover-opacity));
+        filter: brightness(var(--non-hover-opacity)) !important;
     }
 
     .courseimage:hover {
-        filter: brightness(var(--hover-opacity));
+        filter: brightness(var(--hover-opacity)) !important;
     }
+	
+	.generaltable {
+		color: unset;
+	}
+	
+	.tab-content {
+		background-color: transparent !important;
+	}
+	
+	h1, h2, h3, h4, h5, h6, h5.h6.mt-3,
+	.list-group-item, .course-summaryitem {
+		background-color: transparent !important;
+	}
+	
+	.h6.text-danger {
+		color: red !important;
+	}
+	
+	.list-group-item-action:hover {
+		background-color: var(--background-color) !important;
+	}
+	
+	td {
+		color: var(--accent-color) !important;
+		background-color: var(--background-color) !important;
+	}
+	
+	:hover {
+		color: var(--accent-color) !important;
+	}
 
     a {
-        color: var(--accent-color);
+        color: var(--accent-color) !important;
     }
 }
 
